@@ -1,15 +1,154 @@
-body{
-    display: flex;
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-input[type=number] {
-    background-color: white;
-    background-image: url('/assets/penicon.png');
-    background-position: left;
-    background-color: aliceblue;
-    border-radius: 10 px;
-    background-size: 20px;
-    background-repeat: no-repeat; 
-   
-  }
 
+/* Styling untuk body */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f7f7f7;
+  color: #333;
+  padding: 20px;
+}
 
+/* Kontainer utama yang membagi tampilan menjadi dua bagian */
+.container {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Bagian kanan (form input) */
+.main-right {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Bagian kiri (hasil) */
+.main-left {
+  flex: 1;
+  padding: 20px;
+  background-color: #fafafa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling untuk header */
+header {
+  margin-bottom: 10px;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 10px;
+}
+
+header h3 {
+  font-size: 20px;
+  color: #333;
+}
+
+/* Styling untuk artikel */
+article {
+  margin-bottom: 20px;
+}
+
+article p, article ul {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555;
+}
+
+article ul {
+  padding-left: 20px;
+}
+
+/* Styling untuk form */
+form label {
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+form input[type="radio"] {
+  margin-right: 10px;
+}
+
+form input[type="number"] {
+  width: calc(100% - 22px);
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+form button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #ccc;
+  color: #333;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+form button:hover {
+  background-color: #bbb;
+}
+
+/* Styling untuk hasil kalkulator */
+#hasilBMI {
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  text-align: center;
+}
+
+#hasilBMI .bmi-value {
+  font-size: 36px;
+  color: #666;
+}
+
+#hasilBMI .category, #hasilBMI .miniDesc {
+  font-size: 18px;
+  color: #666;
+}
+
+#hasilBMI .download-btn {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #ccc;
+  border-radius: 4px;
+  color: #333;
+  cursor: pointer;
+}
+
+#hasilBMI .download-btn:hover {
+  background-color: #bbb;
+}
+
+/* Styling untuk footer */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #333;
+  color: #fff;
+  margin-top: auto;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer img {
+  width: 100px;
+  opacity: 0.8;
+}
