@@ -59,24 +59,32 @@ article {
   margin-bottom: 20px;
 }
 
-article p, article ul {
+article p {
   font-size: 16px;
   line-height: 1.5;
   color: #555;
 }
 
-article ul {
-  padding-left: 20px;
+aside {
+  margin-bottom: 20px;
+  text-align: center;
+  background-color: #f0f0f0;
 }
 
 /* Styling untuk form */
+form {
+  background-color: #f0f0f0;
+  padding-left: 10px;
+  border-radius: 8px;
+}
+
 form label {
   margin: 10px 0 5px;
   font-weight: bold;
 }
 
 form input[type="radio"] {
-  margin-right: 10px;
+  margin: 6px;
 }
 
 form input[type="number"] {
@@ -85,6 +93,11 @@ form input[type="number"] {
   border: 1px solid #ccc;
   border-radius: 4px;
   margin-bottom: 10px;
+  background-image: url('../assets/pen.png');
+  background-position: 8px px;
+  background-repeat: no-repeat;
+  background-size: 20px 20px; /* Sesuaikan ukuran gambar */
+  padding-left: 35px;
 }
 
 form button {
