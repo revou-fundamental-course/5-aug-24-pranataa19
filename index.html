@@ -5,19 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulator BMI</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css"> <!--  file CSS eksternal -->
 </head>
 
 <body>
-    <div class="container">
-        <div class="main-right">
+    <!-- Kontainer utama  -->
+    <main class="container">
+        <!-- Bagian kiri yang berisi form kalkulator -->
+        <section class="main-left">
+            <!-- Header untuk kalkulator -->
             <header>
                 <h3>Kalkulator BMI</h3>
             </header>
+            <!-- Deskripsi singkat  -->
             <article>
                 <p>Gunakan kalkulator ini untuk menghitung Indeks Massa Tubuh (BMI) Anda dan memahami risiko kesehatan terkait.</p>
             </article>
-            <form id="kalkulatorBMI">
+            <!-- Form untuk input usia,berat dan tinggi-->
+            <form id="kalkulatorbmi">
+                <!-- jenis kelamin -->
                 <label for="gender">Jenis Kelamin:</label>
                 <br><br>
                 <input type="radio" name="gender" id="male" value="male" required>
@@ -25,69 +31,76 @@
                 <input type="radio" name="gender" id="female" value="female" required>
                 <label for="female">Wanita</label>
                 <br><br>
-                <label for="weight">Berat Badan (kg)</label>
-                <br>
-                <input class="inputnumber" type="number" id="weight" name="weight" required ><br>
 
+                <!-- Input usia  -->
                 <label for="age">Usia (tahun)</label>
                 <br>
-                <input class="inputnumber" type="number" id="age" name="age" required><br>
-
+                <input class="input-number" type="number" id="age" name="age" required><br>
+             
+                <!-- Input berat badan  -->
+                <label for="weight">Berat nopi</label>
+                <br>
+                <input class="input-number" type="number" id="weight" name="weight" required><br>
+                
+                <!-- Input tinggi badan  -->
                 <label for="height">Tinggi Badan (cm)</label>
                 <br>
-                <input class="inputnumber" type="number" id="height" name="height" required><br><br>
+                <input class="input-number" type="number" id="height" name="height" required><br><br>
 
-                <button type="button" onclick="hitungBMI()">Hitung BMI</button>
-                <button type="reset">Reset</button>
+                <!-- Tombol untuk menghitung hasil -->
+                <button type="button" id="hitungbtn">Hitung BMI</button>
+                <!-- dan mereset form -->
+                <button type="button" id="resetbtn">Reset</button>
             </form>
-            
-        </div>
+        </section>
 
-        <div class="main-left">
+        <!-- Bagian kanan yang menampilkan hasil  -->
+        <section class="main-right">
+            <!-- Header untuk bagian hasil -->
             <header>
                 <h3>Hasil</h3>
             </header>
-            <div id="hasilBMI">
+            <!-- hasil BMI -->
+            <div id="hasilbmi">
                 <p class="category" id="category"></p>
-                <h1 class="bmi-value" id="bmiValue"></h1>
-                <p class="miniDesc" id="miniDesc"></p>
-                <button class="download-btn" onclick="downloadHasil()">Download Hasil BMI</button>
+                <h1 class="bmi-value" id="bmivalue"></h1>
+                <p class="mini-desc" id="minidesc"></p>
+                <button class="download-btn" id="downloadBtn">Download Hasil BMI</button>
             </div>
+            <!-- Penjelasan mengenai hasil seperti range serta solusi -->
             <article>
-                <p id="rangeBMI"></p>
-                <p id="solusiBMI"></p>
-                <p id="normalWeight"></p>
+                <p id="rangebmi"></p>
+                <p id="solusibmi"></p>
             </article>
+            <!-- Artikel untuk informasi konsultasi ahli gizi -->
             <article>
-
-                    <p>Gunakan informasi ini untuk konsultasi lebih lanjut dengan ahli gizi.</p>
-                    <button>Konsultasi Ahli Gizi Via Aplikasi</button>
-                    <button>Registrasi Online Ahli Gizi</button>
-                
+                <p>Gunakan informasi ini untuk konsultasi lebih lanjut dengan ahli gizi.</p>
+                <button>Konsultasi Ahli Gizi Via Aplikasi</button>
+                <button>Registrasi Online Ahli Gizi</button>
             </article>
+            <!-- Asides untuk informasi penyakit berbahaya ketika obesitas -->
             <aside>
                 <h4>Beberapa Penyakit Berbahaya dari Kegemukan</h4>
-                
-                    <p>Diabetes</p>
-                    <p>Hipertensi</p>
-                    <p>Jantung Koroner</p>
-                    <p>Stroke</p>
-                
+                <p>Diabetes</p>
+                <p>Hipertensi</p>
+                <p>Jantung Koroner</p>
+                <p>Stroke</p>
                 <button>Konsultasi Dokter Via Aplikasi</button>
                 <button>Registrasi Online Sekarang</button>
             </aside>
-        </div>
-    </div>
+        </section>
+    </main>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.js"></script> <!--file JavaScript eksternal -->
 </body>
 
+    <!-----------------------FOOTER----------------------------->
 <footer>
     <a href="https://play.google.com" target="_blank">
-  <img src="assets/playstore.png" alt="Unduh di Playstore">
+        <img src="assets/playstore.png" alt="Unduh di Playstore">
     </a>
-    <a href="https://google.com" target="_blank">
-        <img src="assets/playstore.png" alt="Unduh di AppStore">
+    <a href="https://apps.apple.com" target="_blank">
+        <img src="assets/appstore.png" alt="Unduh di AppStore">
     </a>
 </footer>
 

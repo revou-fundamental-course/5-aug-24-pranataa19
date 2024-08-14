@@ -24,22 +24,21 @@ body {
   gap: 20px;
 }
 
-/* Bagian kanan (form input) */
+/* Bagian kanan ( hasil) */
 .main-right {
   flex: 1;
   padding: 20px;
   background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
 }
 
-/* Bagian kiri (hasil) */
+/* Bagian kiri (form input) */
 .main-left {
   flex: 1;
   padding: 20px;
   background-color: #fafafa;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
 }
 
 /* Styling untuk header */
@@ -82,11 +81,11 @@ form label {
   margin: 10px 0 5px;
   font-weight: bold;
 }
-
+/*styling input yang bertipe radio */
 form input[type="radio"] {
   margin: 6px;
 }
-
+/*styling input yang bertipe number */
 form input[type="number"] {
   width: calc(100% - 22px);
   padding: 8px 10px;
@@ -96,10 +95,10 @@ form input[type="number"] {
   background-image: url('../assets/pen.png');
   background-position: 8px 8px;
   background-repeat: no-repeat;
-  background-size: 20px 20px; /* Sesuaikan ukuran gambar */
+  background-size: 20px 20px; 
   padding-left: 35px;
 }
-
+/* Styling button di form*/
 form button {
   padding: 8px 16px;
   border: none;
@@ -116,24 +115,24 @@ form button:hover {
 }
 
 /* Styling untuk hasil kalkulator */
-#hasilBMI {
+#hasilbmi {
   padding: 20px;
   background-color: #f0f0f0;
   border-radius: 4px;
   text-align: center;
 }
 
-#hasilBMI .bmi-value {
+#hasilbmi .bmi-value {
   font-size: 36px;
   color: #666;
 }
 
-#hasilBMI .category, #hasilBMI .miniDesc {
+#hasilbmi .category, #hasilbmi .minidesc {
   font-size: 18px;
   color: #666;
 }
 
-#hasilBMI .download-btn {
+#hasilbmi .download-btn {
   margin-top: 10px;
   padding: 8px 16px;
   background-color: #ccc;
@@ -142,7 +141,7 @@ form button:hover {
   cursor: pointer;
 }
 
-#hasilBMI .download-btn:hover {
+#hasilbmi .download-btn:hover {
   background-color: #bbb;
 }
 
@@ -157,11 +156,16 @@ footer {
 
 footer a {
   color: #fff;
-  text-decoration: none;
   margin: 0 10px;
 }
 
 footer img {
-  width: 100px;
-  opacity: 0.8;
+  width: 150px;
+}
+/*insi untuk di hp kata kak yama*/
+@media only screen and (max-width: 480px) {
+  .container {
+    flex-direction: column;
+  }
+  
 }
