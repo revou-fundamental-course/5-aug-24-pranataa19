@@ -94,7 +94,7 @@ form input[type="number"] {
   border-radius: 4px;
   margin-bottom: 10px;
   background-image: url('../assets/pen.png');
-  background-position: 8px px;
+  background-position: 8px 8px;
   background-repeat: no-repeat;
   background-size: 20px 20px; /* Sesuaikan ukuran gambar */
   padding-left: 35px;
