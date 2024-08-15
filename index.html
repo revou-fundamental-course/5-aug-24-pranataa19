@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulator BMI</title>
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css"> <!--  file CSS eksternal -->
 </head>
 
@@ -19,12 +20,13 @@
             </header>
             <!-- Deskripsi singkat  -->
             <article>
-                <p>Gunakan kalkulator ini untuk menghitung Indeks Massa Tubuh (BMI) Anda dan memahami risiko kesehatan terkait.</p>
+                <p>Gunakan kalkulator ini untuk menghitung Indeks Massa Tubuh (BMI) Anda dan memahami risiko kesehatan
+                yang terkait.</p>
             </article>
-            <!-- Form untuk input usia,berat dan tinggi-->
+            <!-- Form untuk input data diri-->
             <form id="kalkulatorbmi">
                 <!-- jenis kelamin -->
-                <label for="gender">Jenis Kelamin:</label>
+                <label>Jenis Kelamin:</label>
                 <br><br>
                 <input type="radio" name="gender" id="male" value="male" required>
                 <label for="male">Pria</label>
@@ -36,12 +38,12 @@
                 <label for="age">Usia (tahun)</label>
                 <br>
                 <input class="input-number" type="number" id="age" name="age" required><br>
-             
+
                 <!-- Input berat badan  -->
                 <label for="weight">Berat Badan (kg)</label>
                 <br>
                 <input class="input-number" type="number" id="weight" name="weight" required><br>
-                
+
                 <!-- Input tinggi badan  -->
                 <label for="height">Tinggi Badan (cm)</label>
                 <br>
@@ -65,7 +67,7 @@
                 <p class="category" id="category"></p>
                 <h1 class="bmi-value" id="bmivalue"></h1>
                 <p class="mini-desc" id="minidesc"></p>
-                <button class="download-btn" id="downloadBtn">Download Hasil BMI</button>
+                <button class="download-btn" id="downloadbtn">Download Hasil BMI</button>
             </div>
             <!-- Penjelasan mengenai hasil seperti range serta solusi -->
             <article>
@@ -94,7 +96,7 @@
     <script src="js/script.js"></script> <!--file JavaScript eksternal -->
 </body>
 
-    <!-----------------------FOOTER----------------------------->
+<!-----------------------FOOTER----------------------------->
 <footer>
     <a href="https://play.google.com" target="_blank">
         <img src="assets/playstore.png" alt="Unduh di Playstore">

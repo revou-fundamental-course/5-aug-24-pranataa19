@@ -66,37 +66,34 @@ function displayBMIResult(bmi, gender) {
 
 // Fungsi untuk validasi input
 function validateInputs() {
-    let messages = [];
+    let hasError = false;
 
+    // Validasi jenis kelamin
     if (!document.querySelector('input[name="gender"]:checked')) {
-        messages.push("Pilih jenis kelamin.");
+        hasError = true;
     }
 
-    if (weightInput.value <= 0 || isNaN(weightInput.value)) {
-        messages.push("Masukkan berat badan yang valid.");
-    }
+    // Daftar input yang harus divalidasi
+    const inputs = [weightInput, ageInput, heightInput];
 
-    if (ageInput.value <= 0 || isNaN(ageInput.value)) {
-        messages.push("Masukkan usia yang valid.");
-    }
+    inputs.forEach(input => {
+        if (input.value.trim() === "" || input.value <= 0 || isNaN(input.value)) {
+            hasError = true;
+        }
+    });
 
-    if (heightInput.value <= 0 || isNaN(heightInput.value)) {
-        messages.push("Masukkan tinggi badan yang valid.");
-    }
-
-    if (messages.length > 0) {
-        alert(messages.join("\n"));
+    if (hasError) {
+        alert("Data yang Anda input belum lengkap.");
         return false;
     }
 
     return true;
 }
 
-
 // Fungsi untuk mereset form dan hasil
 function resetFormAndResult() {
     form.reset();
-    hasilBMI.style.display = 'none'; 
+    hasilBMI.style.display = 'none';
     categoryOutput.textContent = '';
     bmiValueOutput.textContent = '';
     miniDescOutput.textContent = '';
@@ -104,8 +101,15 @@ function resetFormAndResult() {
     solusiBMIOutput.textContent = '';
 }
 
+//Fitur download
+document.getElementById("downloadbtn").addEventListener("click", function (event) {
+    event.preventDefault();
+    alert("Maaf, fiitur ini belum tersedia.");
+});
+
+
 // Event listener untuk tombol hitung 
 document.getElementById('hitungbtn').addEventListener('click', hitung);
 
 // Event listener untuk tombol reset
-document.getElementById('reset').addEventListener('click', resetFormAndResult);
+document.getElementById('resetbtn').addEventListener('click', resetFormAndResult);
